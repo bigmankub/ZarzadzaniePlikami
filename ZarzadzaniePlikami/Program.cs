@@ -18,3 +18,13 @@ if (File.Exists(path))
         input = Console.ReadLine();
     }
 }
+
+
+Console.WriteLine("Podaj ścieżkę: ");
+string path2 = @Console.ReadLine();
+Console.WriteLine(path2);
+string[] paths = Directory.GetFileSystemEntries(@path2);
+foreach(string p in paths)
+{
+    Console.WriteLine(p);
+}
